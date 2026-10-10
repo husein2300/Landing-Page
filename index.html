@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        ============================
+        SETTING.JSON CONFIGURATION
+        ============================
+        Replace these placeholders with values from setting.json:
+
+        {{BUSINESS_NAME}}   -> setting.json -> business_name   (default: RASA NUSANTARA)
+        {{WHATSAPP_NUMBER}} -> setting.json -> whatsapp_number (default: 6281234567890)
+        {{ADDRESS}}         -> setting.json -> address         (default: Jl. Kebon Jeruk No. 23, Jakarta Selatan, Indonesia)
+        {{OPENING_HOURS}}   -> setting.json -> opening_hours   (default: Mon — Sun · 08.00 — 21.00)
+        {{INSTAGRAM}}       -> setting.json -> instagram       (default: @rasanusantara)
+    -->
+
+    <title>RASA NUSANTARA — Good Food, Good Mood</title>
+    <meta name="description" content="Rasa Nusantara menghadirkan rasa autentik Indonesia dengan bahan segar lokal, dibuat dengan cinta setiap hari. Pesan via WhatsApp sekarang.">
+    <meta name="keywords" content="makanan indonesia, UMKM, kuliner lokal, pesan makanan, fresh food">
+    <meta name="author" content="Rasa Nusantara">
+
+    <link rel="canonical" href="https://example.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RASA NUSANTARA — Good Food, Good Mood">
+    <meta property="og:description" content="Rasa autentik Indonesia dengan bahan segar lokal, dibuat dengan cinta setiap hari.">
+    <meta property="og:image" content="assets/images/hero.jpg">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:site_name" content="Rasa Nusantara">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RASA NUSANTARA — Good Food, Good Mood">
+    <meta name="twitter:description" content="Rasa autentik Indonesia dengan bahan segar lokal.">
+    <meta name="twitter:image" content="assets/images/hero.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍃</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================
+         WHATSAPP FLOATING BUTTON
+         {{WHATSAPP_NUMBER}} = 6281234567890
+         ============================ -->
+    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="wa-float" aria-label="Order via WhatsApp">
+        <svg class="wa-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16.003 3C8.826 3 3.003 8.822 3.003 16c0 2.29.592 4.426 1.613 6.262L3.003 29l6.879-1.589a12.95 12.95 0 0 0 6.121 1.525c7.177 0 13.001-5.822 13.001-13 0-3.464-1.36-6.72-3.801-9.165C28.402 4.846 22.485 3 16.003 3Zm6.625 16.48c-.272.765-1.571 1.472-2.204 1.558-.563.075-1.295.101-2.089-.111-.487-.13-1.11-.318-1.917-.629-3.365-1.294-5.563-4.357-5.725-4.558-.162-.201-1.323-1.761-1.323-3.357s.836-2.382 1.134-2.711c.299-.329.65-.413.867-.413.218 0 .434.002.623.012.212.011.498-.08.779.598.28.678.955 2.347 1.038 2.512.083.165.139.358.028.579-.111.222-.166.361-.332.553-.166.192-.348.426-.498.575-.165.165-.337.347-.145.684.192.337.855 1.41 1.836 2.281 1.262 1.104 2.322 1.444 2.651 1.605.329.161.521.136.714-.083.193-.219.824-.955 1.043-1.288.219-.333.438-.278.732-.168.295.111 1.864.88 2.183 1.042.319.163.532.239.609.373.077.134.077.786-.194 1.551Z" fill="currentColor"/>
+        </svg>
+        <span class="wa-tooltip">Order via WhatsApp</span>
+    </a>
+
+    <!-- ============================
+         NAVIGATION
+         {{BUSINESS_NAME}} = RASA NUSANTARA
+         {{WHATSAPP_NUMBER}} = 6281234567890
+         ============================ -->
+    <header class="nav" role="banner">
+        <div class="nav-inner">
+            <a href="#top" class="nav-logo" aria-label="Rasa Nusantara - Home">
+                <span class="logo-mark">🍃</span>
+                <span class="logo-text">RASA<br>NUSANTARA</span>
+            </a>
+
+            <nav class="nav-links" role="navigation" aria-label="Main navigation">
+                <a href="#top">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="nav-cta">
+                <span>Order</span>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+
+            <label class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <input type="checkbox" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </label>
+        </div>
+
+        <div class="nav-mobile">
+            <a href="#top">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="mobile-cta">Order via WhatsApp</a>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- ============================
+             HERO SECTION
+             {{BUSINESS_NAME}} = RASA NUSANTARA
+             {{WHATSAPP_NUMBER}} = 6281234567890
+             ============================ -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-marquee" aria-hidden="true">
+                <div class="marquee-track">
+                    <span>FRESH</span><span class="dot">•</span>
+                    <span>LOCAL</span><span class="dot">•</span>
+                    <span>MADE WITH LOVE</span><span class="dot">•</span>
+                    <span>AUTHENTIC</span><span class="dot">•</span>
+                    <span>FRESH</span><span class="dot">•</span>
+                    <span>LOCAL</span><span class="dot">•</span>
+                    <span>MADE WITH LOVE</span><span class="dot">•</span>
+                    <span>AUTHENTIC</span><span class="dot">•</span>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="tag-dot"></span>
+                    LOCAL · FRESH · MADE DAILY
+                </div>
+
+                <h1 id="hero-heading" class="hero-heading">
+                    <span class="line">Something</span>
+                    <span class="line accent">Worth</span>
+                    <span class="line italic">Tasting.</span>
+                </h1>
+
+                <div class="hero-bottom">
+                    <p class="hero-sub">
+                        Menghadirkan rasa autentik Nusantara dalam setiap gigitan —
+                        bahan segar dari petani lokal, dibuat dengan hati.
+                    </p>
+
+                    <div class="hero-ctas">
+                        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="btn btn-primary">
+                            <span>Order via WhatsApp</span>
+                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="#menu" class="btn btn-ghost">
+                            Explore Menu
+                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4v12m0 0-4-4m4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <figure class="hero-visual" aria-hidden="true">
+                <div class="hero-shape shape-1"></div>
+                <div class="hero-shape shape-2"></div>
+                <div class="hero-img-wrap">
+                    <img src="assets/images/hero.jpg" alt="Signature dish Rasa Nusantara - makanan Indonesia autentik disajikan segar" loading="eager">
+                </div>
+                <div class="hero-badge">
+                    <span class="badge-year">EST.</span>
+                    <span class="badge-num">2019</span>
+                </div>
+            </figure>
+
+            <div class="hero-scroll" aria-hidden="true">
+                <span></span>
+                <p>Scroll</p>
+            </div>
+        </section>
+
+        <!-- ============================
+             BRAND INTRO / ABOUT
+             ============================ -->
+        <section id="about" class="intro" aria-labelledby="intro-heading">
+            <div class="intro-grid sync-pair">
+                <div class="intro-left sync-left">
+                    <span class="section-num">01 — Brand Story</span>
+                    <h2 id="intro-heading" class="intro-heading">
+                        WE BELIEVE<br>
+                        <span class="accent-text">GOOD THINGS</span><br>
+                        SHOULD TASTE<br>
+                        <em>GOOD.</em>
+                    </h2>
+                </div>
+
+                <div class="intro-right sync-right">
+                    <p class="intro-text-large">
+                        Setiap hidangan yang kami buat adalah <strong>undangan untuk merasakan rumah</strong> —
+                        sebuah perjalanan rasa yang menghubungkan kamu dengan tanah air.
+                    </p>
+                    <p class="intro-text">
+                        Kami bekerja sama dengan petani lokal di seluruh Indonesia untuk mendapatkan bahan baku
+                        terbaik. Tidak ada pengawet, tidak ada pewarna buatan. Hanya <em>rasa jujur</em>
+                        yang datang dari alam dan dapur kami yang hangat.
+                    </p>
+
+                    <figure class="intro-img">
+                        <img src="assets/images/about.jpg" alt="Proses pembuatan makanan di dapur Rasa Nusantara dengan bahan segar" loading="lazy">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================
+             PRODUCT / MENU SECTION
+             {{WHATSAPP_NUMBER}} = 6281234567890
+             ============================ -->
+        <section id="menu" class="menu" aria-labelledby="menu-heading">
+            <header class="section-head fade-section">
+                <span class="section-num">02 — Our Menu</span>
+                <h2 id="menu-heading" class="section-heading">
+                    RASA YANG<br>
+                    <em>PUNYA CERITA.</em>
+                </h2>
+            </header>
+
+            <!-- Product 01 - Split Large -->
+            <article class="product product-01 sync-pair" aria-labelledby="p1-title">
+                <div class="product-media sync-left">
+                    <div class="product-img">
+                        <img src="assets/images/product-1.jpg" alt="Nasi Goreng Kencur - nasi goreng khas dengan aroma kencur segar" loading="lazy">
+                        <div class="product-overlay">
+                            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Nasi%20Goreng%20Kencur" target="_blank" rel="noopener" class="product-order">
+                                Order Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info sync-right">
+                    <span class="product-no">01</span>
+                    <h3 id="p1-title" class="product-name">Nasi Goreng<br>Kencur</h3>
+                    <p class="product-desc">
+                        Nasi goreng dengan aroma kencur yang khas,
+                        disajikan dengan telur mata sapi, kerupuk,
+                        dan acar timun segar.
+                    </p>
+                    <div class="product-foot">
+                        <span class="product-price">Rp 35.000</span>
+                        <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Nasi%20Goreng%20Kencur" target="_blank" rel="noopener" class="link-arrow">
+                            Order via WhatsApp
+                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 02 - Reverse + Stacked -->
+            <article class="product product-02 sync-pair" aria-labelledby="p2-title">
+                <div class="product-info sync-left">
+                    <span class="product-no">02</span>
+                    <h3 id="p2-title" class="product-name">Soto Ayam<br>Kampung</h3>
+                    <p class="product-desc">
+                        Soto ayam dengan bumbu kuning rempah pilihan,
+                        suwiran ayam kampung, koya melimpah,
+                        dan pelengkap lengkap.
+                    </p>
+                    <div class="product-foot">
+                        <span class="product-price">Rp 42.000</span>
+                        <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Soto%20Ayam%20Kampung" target="_blank" rel="noopener" class="link-arrow">
+                            Order via WhatsApp
+                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-media sync-right">
+                    <div class="product-img frame-shape">
+                        <img src="assets/images/product-2.jpg" alt="Soto Ayam Kampung - soto kuning dengan ayam kampung dan pelengkap" loading="lazy">
+                        <div class="product-overlay">
+                            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Soto%20Ayam%20Kampung" target="_blank" rel="noopener" class="product-order">
+                                Order Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-chip" aria-hidden="true">
+                        <span>★</span> Best Seller
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 03 - Full Width Image -->
+            <article class="product product-03 fade-scale" aria-labelledby="p3-title">
+                <div class="product-fullhead">
+                    <div class="fullhead-left">
+                        <span class="product-no dark">03</span>
+                        <h3 id="p3-title" class="product-name huge">Es Teh<br><em>Tarikh.</em></h3>
+                    </div>
+                    <p class="fullhead-meta">
+                        Signature Drink · Rp 18.000<br>
+                        <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Es%20Teh%20Tarikh" target="_blank" rel="noopener" class="link-underline">Order via WhatsApp →</a>
+                    </p>
+                </div>
+                <div class="product-fullimg">
+                    <img src="assets/images/product-3.jpg" alt="Es Teh Tarikh - signature drink Rasa Nusantara dengan rasa manis pas" loading="lazy">
+                    <div class="fullimg-overlay"></div>
+                    <div class="fullimg-caption">
+                        <span>Teh ditarik berkali-kali untuk buih yang sempurna — manis, hangat, menenangkan.</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 04-05 - Two Column -->
+            <div class="product-duo fade-stagger">
+                <article class="product product-04" aria-labelledby="p4-title">
+                    <div class="product-img tall">
+                        <img src="assets/images/product-4.jpg" alt="Rendang Sapi - rendang padang asli dengan bumbu meresap" loading="lazy">
+                        <div class="product-overlay">
+                            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Rendang%20Sapi" target="_blank" rel="noopener" class="product-order">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="duo-info">
+                        <span class="product-no">04</span>
+                        <h4 id="p4-title" class="duo-name">Rendang Sapi</h4>
+                        <p class="duo-desc">Rendang asli Sumatera Barat, dimasak perlahan hingga bumbu meresap sempurna.</p>
+                        <div class="duo-foot">
+                            <span class="product-price">Rp 55.000</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product product-05" aria-labelledby="p5-title">
+                    <div class="product-img tall offset">
+                        <img src="assets/images/product-5.jpg" alt="Gado-Gado Sayur - sayuran segar dengan bumbu kacang dan kerupuk" loading="lazy">
+                        <div class="product-overlay">
+                            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Gado-Gado%20Sayur" target="_blank" rel="noopener" class="product-order">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="duo-info">
+                        <span class="product-no">05</span>
+                        <h4 id="p5-title" class="duo-name">Gado-Gado Sayur</h4>
+                        <p class="duo-desc">Sayuran segar dengan bumbu kacang sangrai, lontong, dan kerupuk gendar. Sehat &amp; lezat.</p>
+                        <div class="duo-foot">
+                            <span class="product-price">Rp 32.000</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Product 06 - Featured Big -->
+            <article class="product product-06 fade-section" aria-labelledby="p6-title">
+                <div class="p06-left">
+                    <div class="p06-tag">NEW DROP</div>
+                    <h3 id="p6-title" class="p06-name">
+                        Paket<br>
+                        <em>Kebersamaan</em>
+                    </h3>
+                    <p class="p06-desc">
+                        Paket lengkap untuk 4-5 orang — pilihan sempurna
+                        untuk kumpul keluarga atau arisan.
+                    </p>
+                    <ul class="p06-list" aria-label="Isi paket">
+                        <li>✦ Nasi Putih / Nasi Goreng</li>
+                        <li>✦ Ayam Bakar Taliwang</li>
+                        <li>✦ Sambal Matah &amp; Lalapan</li>
+                        <li>✦ Es Teh Tarikh (4 pcs)</li>
+                    </ul>
+                    <div class="p06-foot">
+                        <span class="p06-price">Rp 195.000</span>
+                        <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Paket%20Kebersamaan" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                            <span>Order Paket</span>
+                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="p06-right">
+                    <div class="p06-img">
+                        <img src="assets/images/product-6.jpg" alt="Paket Kebersamaan - paket lengkap makanan Indonesia untuk keluarga" loading="lazy">
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============================
+             BRAND STORY / MADE WITH PURPOSE
+             ============================ -->
+        <section class="purpose" aria-labelledby="purpose-heading">
+            <div class="purpose-inner">
+                <figure class="purpose-img fade-left" aria-hidden="true">
+                    <img src="assets/images/gallery-1.jpg" alt="Bahan makanan segar lokal dari petani Indonesia" loading="lazy">
+                </figure>
+
+                <div class="purpose-text fade-right">
+                    <span class="section-num light">03 — Our Values</span>
+                    <h2 id="purpose-heading" class="purpose-heading">
+                        MADE WITH<br>
+                        <em>PURPOSE.</em>
+                    </h2>
+
+                    <div class="purpose-cols">
+                        <div>
+                            <h4 class="purpose-title">Bahan Lokal</h4>
+                            <p>100% bahan baku dari petani &amp; produsen lokal di seluruh Indonesia. Setiap transaksi membantu ekonomi UMKM di desa.</p>
+                        </div>
+                        <div>
+                            <h4 class="purpose-title">Buatan Tangan</h4>
+                            <p>Dimasak perlahan oleh koki berpengalaman dengan resep warisan turun-temurun. Tidak ada mesin, tidak ada pabrik.</p>
+                        </div>
+                        <div>
+                            <h4 class="purpose-title">Tanpa Pengawet</h4>
+                            <p>Semua dibuat segar setiap pagi. Tanpa pewarna, tanpa pengawet, tanpa perasa buatan. Hanya rasa asli dari alam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================
+             VISUAL BREAK / BANNER
+             ============================ -->
+        <section class="banner fade-scale" aria-label="Brand statement">
+            <div class="banner-img" aria-hidden="true">
+                <img src="assets/images/banner.jpg" alt="Background banner - pemandangan sawah Indonesia" loading="lazy">
+            </div>
+            <div class="banner-overlay" aria-hidden="true"></div>
+            <div class="banner-content">
+                <h2 class="banner-heading">
+                    <span>MADE LOCAL.</span>
+                    <em>LOVED EVERYWHERE.</em>
+                </h2>
+                <span class="banner-tag">RASA NUSANTARA · SINCE 2019</span>
+            </div>
+        </section>
+
+        <!-- ============================
+             WHY US / EDITORIAL LIST
+             ============================ -->
+        <section class="why" aria-labelledby="why-heading">
+            <header class="section-head center fade-section">
+                <span class="section-num">04 — Why Us</span>
+                <h2 id="why-heading" class="section-heading">
+                    ALASAN<br>
+                    <em>KAMU SUKA.</em>
+                </h2>
+            </header>
+
+            <ul class="why-list fade-stagger">
+                <li class="why-item">
+                    <span class="why-num">01</span>
+                    <h3 class="why-title">Fresh Ingredients</h3>
+                    <p class="why-desc">Bahan dipilih setiap pagi langsung dari pasar lokal — kesegaran terasa di setiap suapan.</p>
+                    <span class="why-line" aria-hidden="true"></span>
+                </li>
+
+                <li class="why-item">
+                    <span class="why-num">02</span>
+                    <h3 class="why-title">Made Daily</h3>
+                    <p class="why-desc">Tidak ada stok besok. Semua dibuat di hari yang sama, untuk kualitas terbaik setiap waktu.</p>
+                    <span class="why-line" aria-hidden="true"></span>
+                </li>
+
+                <li class="why-item">
+                    <span class="why-num">03</span>
+                    <h3 class="why-title">Local Business</h3>
+                    <p class="why-desc">UMKM asli buatan tangan anak bangsa. Setiap pembelianmu mendukung 120+ keluarga mitra tani.</p>
+                    <span class="why-line" aria-hidden="true"></span>
+                </li>
+
+                <li class="why-item">
+                    <span class="why-num">04</span>
+                    <h3 class="why-title">Quality First</h3>
+                    <p class="why-desc">Standar kebersihan &amp; rasa diperiksa setiap hari. Kepuasanmu adalah prioritas nomor satu.</p>
+                    <span class="why-line" aria-hidden="true"></span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ============================
+             GALLERY / ARTISTIC MASONRY
+             ============================ -->
+        <section class="gallery" aria-labelledby="gallery-heading">
+            <header class="section-head fade-section">
+                <span class="section-num">05 — Gallery</span>
+                <h2 id="gallery-heading" class="section-heading">
+                    POTRET<br>
+                    <em>SEHARI-HARI.</em>
+                </h2>
+            </header>
+
+            <div class="gallery-grid fade-stagger">
+                <figure class="g-item g-1">
+                    <img src="assets/images/gallery-1.jpg" alt="Bahan sayuran segar dari petani lokal" loading="lazy">
+                    <figcaption><span>From the Farm</span></figcaption>
+                </figure>
+                <figure class="g-item g-2">
+                    <img src="assets/images/gallery-2.jpg" alt="Proses memasak di dapur Rasa Nusantara" loading="lazy">
+                    <figcaption><span>Our Kitchen</span></figcaption>
+                </figure>
+                <figure class="g-item g-3">
+                    <img src="assets/images/gallery-3.jpg" alt="Hidangan siap saji dengan piring keramik" loading="lazy">
+                    <figcaption><span>On the Plate</span></figcaption>
+                </figure>
+                <figure class="g-item g-4">
+                    <img src="assets/images/gallery-4.jpg" alt="Suasana tempat makan yang nyaman dan hangat" loading="lazy">
+                    <figcaption><span>The Space</span></figcaption>
+                </figure>
+                <figure class="g-item g-5">
+                    <img src="assets/images/gallery-5.jpg" alt="Tim Rasa Nusantara yang ramah" loading="lazy">
+                    <figcaption><span>Our Team</span></figcaption>
+                </figure>
+                <figure class="g-item g-6">
+                    <img src="assets/images/gallery-6.jpg" alt="Pelanggan menikmati makanan bersama keluarga" loading="lazy">
+                    <figcaption><span>Happy Faces</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ============================
+             TESTIMONIALS / EDITORIAL
+             ============================ -->
+        <section class="testi" aria-labelledby="testi-heading">
+            <header class="section-head center fade-section">
+                <span class="section-num">06 — Words</span>
+                <h2 id="testi-heading" class="section-heading">
+                    KATA MEREKA.<br>
+                </h2>
+            </header>
+
+            <figure class="testi-quote fade-scale" role="figure">
+                <blockquote>
+                    <span class="quote-mark" aria-hidden="true">"</span>
+                    <p class="quote-text">
+                        THE BEST NASI<br>
+                        GORENG I'VE HAD<br>
+                        <em>IN A WHILE.</em>
+                    </p>
+                </blockquote>
+                <figcaption class="quote-author">
+                    <div class="author-avatar" aria-hidden="true">AK</div>
+                    <div>
+                        <strong>Anindya Kusuma</strong>
+                        <span>Food Blogger · Jakarta</span>
+                    </div>
+                </figcaption>
+            </figure>
+
+            <div class="testi-mini fade-stagger">
+                <figure class="mini-testi">
+                    <blockquote>"Rasanya bikin kangen rumah. Bumbunya tepat, porsinya pas, delivery cepat juga!"</blockquote>
+                    <figcaption>— Bayu P., Tangerang</figcaption>
+                </figure>
+                <figure class="mini-testi">
+                    <blockquote>"Paket Kebersamaan selalu jadi andalan keluarga kami saat weekend. Worth every penny!"</blockquote>
+                    <figcaption>— Sarah M., Bekasi</figcaption>
+                </figure>
+                <figure class="mini-testi">
+                    <blockquote>"Es Teh Tarikh-nya juara! Rasanya otentik banget, ga manis berlebihan. 10/10."</blockquote>
+                    <figcaption>— Rizki A., Bandung</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ============================
+             CTA SECTION
+             {{WHATSAPP_NUMBER}} = 6281234567890
+             ============================ -->
+        <section class="cta fade-scale" aria-labelledby="cta-heading">
+            <div class="cta-bg" aria-hidden="true"></div>
+            <div class="cta-inner">
+                <h2 id="cta-heading" class="cta-heading">
+                    READY<br>
+                    <span>TO ORDER?</span>
+                </h2>
+                <p class="cta-sub">Klik tombol di bawah dan chat kami langsung via WhatsApp. Respon cepat dalam hitungan menit.</p>
+                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="btn btn-cta">
+                    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" class="btn-wa">
+                        <path d="M16.003 3C8.826 3 3.003 8.822 3.003 16c0 2.29.592 4.426 1.613 6.262L3.003 29l6.879-1.589a12.95 12.95 0 0 0 6.121 1.525c7.177 0 13.001-5.822 13.001-13 0-3.464-1.36-6.72-3.801-9.165C28.402 4.846 22.485 3 16.003 3Zm6.625 16.48c-.272.765-1.571 1.472-2.204 1.558-.563.075-1.295.101-2.089-.111-.487-.13-1.11-.318-1.917-.629-3.365-1.294-5.563-4.357-5.725-4.558-.162-.201-1.323-1.761-1.323-3.357s.836-2.382 1.134-2.711c.299-.329.65-.413.867-.413.218 0 .434.002.623.012.212.011.498-.08.779.598.28.678.955 2.347 1.038 2.512.083.165.139.358.028.579-.111.222-.166.361-.332.553-.166.192-.348.426-.498.575-.165.165-.337.347-.145.684.192.337.855 1.41 1.836 2.281 1.262 1.104 2.322 1.444 2.651 1.605.329.161.521.136.714-.083.193-.219.824-.955 1.043-1.288.219-.333.438-.278.732-.168.295.111 1.864.88 2.183 1.042.319.163.532.239.609.373.077.134.077.786-.194 1.551Z" fill="currentColor"/>
+                    </svg>
+                    <span>Order via WhatsApp</span>
+                    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============================
+             CONTACT SECTION
+             {{BUSINESS_NAME}}   = RASA NUSANTARA
+             {{WHATSAPP_NUMBER}} = 6281234567890
+             {{ADDRESS}}         = Jl. Kebon Jeruk No. 23, Jakarta Selatan, Indonesia
+             {{OPENING_HOURS}}   = Mon — Sun · 08.00 — 21.00
+             {{INSTAGRAM}}       = @rasanusantara
+             ============================ -->
+        <section id="contact" class="contact" aria-labelledby="contact-heading">
+            <header class="section-head fade-section">
+                <span class="section-num">07 — Contact</span>
+                <h2 id="contact-heading" class="section-heading">
+                    TEMUI<br>
+                    <em>KAMI.</em>
+                </h2>
+            </header>
+
+            <div class="contact-grid fade-stagger">
+                <div class="contact-col">
+                    <h3 class="contact-label">Business Name</h3>
+                    <p class="contact-value big">RASA NUSANTARA</p>
+                </div>
+
+                <div class="contact-col">
+                    <h3 class="contact-label">WhatsApp</h3>
+                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="contact-value link">
+                        +62 812-3456-7890
+                        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+
+                <div class="contact-col">
+                    <h3 class="contact-label">Address</h3>
+                    <p class="contact-value">
+                        Jl. Kebon Jeruk No. 23,<br>
+                        Jakarta Selatan, Indonesia
+                    </p>
+                </div>
+
+                <div class="contact-col">
+                    <h3 class="contact-label">Opening Hours</h3>
+                    <p class="contact-value">Mon — Sun</p>
+                    <p class="contact-value">08.00 — 21.00 WIB</p>
+                </div>
+
+                <div class="contact-col">
+                    <h3 class="contact-label">Instagram</h3>
+                    <a href="https://instagram.com/rasanusantara" target="_blank" rel="noopener" class="contact-value link">
+                        @rasanusantara
+                        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================
+             FOOTER
+             {{BUSINESS_NAME}} = RASA NUSANTARA
+             {{WHATSAPP_NUMBER}} = 6281234567890
+             {{INSTAGRAM}}       = @rasanusantara
+             ============================ -->
+        <footer class="footer" role="contentinfo">
+            <div class="footer-inner">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-mark">🍃</span>
+                        <span class="logo-text">RASA<br>NUSANTARA</span>
+                    </div>
+                    <p class="footer-desc">Good food, good mood. Rasa autentik Nusantara, dibuat dengan cinta setiap hari.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="https://instagram.com/rasanusantara" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                            Instagram
+                        </a>
+                        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.75 13.35L3 21l4.8-1.3A9 9 0 1 0 12 3Zm6.05 12.15c-.23.65-1.34 1.24-1.88 1.31-.48.06-1.1.09-1.77-.1-.41-.11-.95-.27-1.64-.53-2.88-1.11-4.77-3.75-4.91-3.91-.14-.17-1.14-1.51-1.14-2.88s.72-2.05 0-2.05c.26-.28.56-.35.74-.35.19 0 .38.01.54.02.18.01.42-.07.66.5.23.57.81 2.01.88 2.15.07.14.11.31.02.49-.1.19-.14.31-.28.47-.14.16-.3.37-.42.49-.14.14-.29.3-.12.58.17.29.73 1.21 1.56 1.95 1.07.94 1.98 1.23 2.26 1.37.28.14.45.11.61-.07.16-.19.7-.82.89-1.1.2-.29.38-.24.63-.14.25.09 1.6.76 1.87.89.27.14.45.2.52.32.07.11.07.68-.17 1.35Z" stroke="currentColor" stroke-width="1.5"/></svg>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 RASA NUSANTARA. Made with ♥ in Indonesia.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+    (function() {
+        'use strict';
+
+        var supportsAnimTimeline = CSS && CSS.supports && (
+            CSS.supports('animation-timeline: view()') ||
+            CSS.supports('(animation-timeline: view())')
+        );
+
+        var syncPairs = document.querySelectorAll('.sync-pair');
+        var staggerElements = document.querySelectorAll('.fade-stagger');
+        var otherFadeElements = document.querySelectorAll('.fade-section, .fade-left, .fade-right, .fade-scale');
+
+        /* ---------- SYNC PAIR OBSERVER (Intro, Product-01, Product-02) ----------
+           Observer WRAPPER parent, kedua child sync get sync-visible / sync-fadeout
+           class BERSAMAAN di dalam 1 callback — jaminan 100% sinkron timing.
+           Always on, even if animation-timeline supported (sebagai fallback /
+           menjamin bahwa browser yang sedikit buggy animation-timeline pun tetap work
+           dan child punya handler JS yang sama persis).
+        -------------------------------------------------------------------- */
+        if (syncPairs.length && 'IntersectionObserver' in window) {
+            var syncInObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('sync-visible');
+                        entry.target.classList.remove('sync-fadeout');
+                    }
+                });
+            }, {
+                threshold: 0.20,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            var syncOutObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (!entry.isIntersecting) {
+                        var rect = entry.boundingClientRect;
+                        var vh = window.innerHeight || document.documentElement.clientHeight;
+                        if (rect.bottom < -20 || rect.top > vh + 20) {
+                            entry.target.classList.remove('sync-visible');
+                            entry.target.classList.add('sync-fadeout');
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.02,
+                rootMargin: '0px'
+            });
+
+            syncPairs.forEach(function(wrapper) {
+                syncInObserver.observe(wrapper);
+                syncOutObserver.observe(wrapper);
+            });
+        } else if (syncPairs.length) {
+            syncPairs.forEach(function(w) { w.classList.add('sync-visible'); });
+        }
+
+        /* ---------- NORMAL FADE IN (ONCE, NO FADE OUT) ---------- */
+        var observeNormalTargets;
+        if (supportsAnimTimeline) {
+            observeNormalTargets = staggerElements;
+        } else {
+            var allOther = [];
+            otherFadeElements.forEach(function(el) {
+                if (!el.closest('.sync-pair') && !el.classList.contains('sync-left') && !el.classList.contains('sync-right')) {
+                    allOther.push(el);
+                }
+            });
+            staggerElements.forEach(function(el) { allOther.push(el); });
+            observeNormalTargets = allOther;
+        }
+
+        if (observeNormalTargets && observeNormalTargets.length) {
+            if (!('IntersectionObserver' in window)) {
+                observeNormalTargets.forEach(function(el) { el.classList.add('visible'); });
+            } else {
+                var normalObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            normalObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.15,
+                    rootMargin: '0px 0px -60px 0px'
+                });
+                observeNormalTargets.forEach(function(el) { normalObserver.observe(el); });
+            }
+        }
+    })();
+    </script>
+
+</body>
+</html>
